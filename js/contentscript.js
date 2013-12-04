@@ -1,6 +1,6 @@
 /**
  * TODO: ■(1)submitにフックして適当な文字をアラート表示する。
- * TODO: □(2)パスワードを取得してアラート表示する。
+ * TODO: ■(2)パスワードを取得してアラート表示する。
  * TODO: □(3)IDを取得してアラート表示する。
  * TODO: □(4)表示しているサイトのＵＲＬをアラート表示する。
  * TODO: □(5)rails側のアプリを作成する。（モデル：accounts   url:string, id:string passwd:string）でscaffold!!
@@ -12,6 +12,9 @@
  
 document.addEventListener("submit", function (e) {
   alert("hooked!!");
+  
+  
+  alert("password:" +  $(":password").val() );
   
 debugger;
 
