@@ -11,7 +11,7 @@
     
     "icons": {
         "16" : "images/1278_16.png",
-        "48" : "images/1278_48.png"
+        "48" : "images/1278_48.png",
        "128" : "images/1278_128.png"
     },
     
@@ -19,7 +19,6 @@
 		{
 		"matches": ["<all_urls>"],
 			"js": [	"js/jquery-1.9.1.js",
-					"js/background.js",
 					"js/contentscript.js"]
 		}
     ],

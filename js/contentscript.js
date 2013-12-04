@@ -1,20 +1,23 @@
 /**
- * TODO: pop.htmlから呼出すようにする。
+ * TODO: ■(1)submitにフックして適当な文字をアラート表示する。
+ * TODO: □(2)パスワードを取得してアラート表示する。
+ * TODO: □(3)IDを取得してアラート表示する。
+ * TODO: □(4)表示しているサイトのＵＲＬをアラート表示する。
+ * TODO: □(5)rails側のアプリを作成する。（モデル：accounts   url:string, id:string passwd:string）でscaffold!!
+ * TODO: □(6)rails側のアプリを作成する。（モデル：accounts   url:string, id:string passwd:string）でscaffold!!
+ * TODO: □(7)openshift or herokuにディプロイする。
+ * TODO: □(8)javascriptから、url、id、passwdをrailsに送信する。
  */ 
-chrome.extension.onRequest.addListener(
-  function(ignores, sender, sendResponse) {
+ 
+ 
+document.addEventListener("submit", function (e) {
+  alert("hooked!!");
+  
+debugger;
 
-  }
-);
-
-
-var hostName = "http://sandbox.evernote.com";
-var options,oauth;
- options = {
-    consumerKey: "bm-sirato",
-    consumerSecret: "e22f13dd14bc02e4",
-    callbackUrl : <your callback url>,
-    signatureMethod : "HMAC-SHA1",
-};
-oauth = OAuth(options);
-oauth.request({'method': 'GET', 'url': hostName + '/oauth', 'success': success, 'failure': failure});
+  $(e.target).nextAll().each(
+	function(){
+		alert( $(this).id );
+	});
+  
+}, false);
